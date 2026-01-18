@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "19563ef9-0108-408e-8e87-31a05921bf9a",
+		"name": "Training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22572974"
+	},
+	"item": [
+		{
+			"name": "Basic endpoint tests",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"alex.dyatchenko@gmail.com\",\r\n    \"password\": \"NewTestPassword2020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://thinking-tester-contact-list.herokuapp.com/users/login",
+							"protocol": "https",
+							"host": [
+								"thinking-tester-contact-list",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contact List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{login_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://thinking-tester-contact-list.herokuapp.com/contacts",
+							"protocol": "https",
+							"host": [
+								"thinking-tester-contact-list",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Contact by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{login_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://thinking-tester-contact-list.herokuapp.com/contacts",
+							"protocol": "https",
+							"host": [
+								"thinking-tester-contact-list",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative",
+			"item": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{login_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
