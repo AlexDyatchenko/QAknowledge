@@ -207,3 +207,33 @@ export const options = {
   },
 };
 ```
+```ts
+// This is the missing piece you noticed:
+  const requestHeaders = response.request().headers();
+  expect(requestHeaders['x-custom-header']).toBe('test-value');
+```
+
+```ts
+    const response = await request.get(`${BASE_URL}/users`, {
+      headers: {
+        'Authorization': 'Bearer fake-token',
+        'X-Custom-Header': 'test-value'
+      }
+    });
+```
+
+```ts
+  test('should handle pagination parameters', async ({ request }) => {
+    const response = await request.get(`${BASE_URL}/users`, {
+      params: {
+        _page: 1,
+        _limit: 5
+      }
+    });
+    
+    expect(response.status()).toBe(200);
+    const users = await response.json();
+    expect(users.length).toBeLessThanOrEqual(5);
+  });
+});
+```
