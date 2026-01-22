@@ -29,7 +29,7 @@ Update readme.md if needed.
 Use emoji in headings where appropriate to enhance readability.
 Run and check all tests are working fine as expected.
 fix all errors in all created or updated js files.
-
+Don't put '✓' symbol in front of check messages in check() functions.
 ---
 
 Comparison of Test Types

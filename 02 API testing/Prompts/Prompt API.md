@@ -45,6 +45,7 @@ Update readme.md if needed.
 Use emoji in headings where appropriate to enhance readability.
 Run and check all tests are working fine as expected.
 fix all errors in all created or updated ts files.
+Let's do minimal coverage according to ISTQB standards, like decision table, 2 BVA, negative, positive, etc.
 
 Use folder structure:
 

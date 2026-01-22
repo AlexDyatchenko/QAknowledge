@@ -237,3 +237,27 @@ export const options = {
   });
 });
 ```
+
+```ts
+const basePayload = {
+  userId: 1,
+  role: "USER",
+  active: true
+};
+
+const payload = {
+  ...basePayload,
+  role: "ADMIN"
+};
+```
+
+```js
+//The spread operator is a concise way to conditionally add properties to an object.
+const headers = {
+  Accept: "application/json",
+  "Content-Type": "application/json",
+  ...(useCache ? {} : {
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+  }),
+};
+```
