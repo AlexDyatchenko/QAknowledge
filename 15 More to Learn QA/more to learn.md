@@ -1,7 +1,14 @@
+Intellij IDEA 
+
 API contract testing
 client-vendor test role?
 how you design spike tests
 
+OWASP ZAP
+SonarQube
+
+
+Jfrog
 
 Integration specialist Skills
 
