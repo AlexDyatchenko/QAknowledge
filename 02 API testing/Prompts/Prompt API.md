@@ -46,6 +46,9 @@ Use emoji in headings where appropriate to enhance readability.
 Run and check all tests are working fine as expected.
 fix all errors in all created or updated ts files.
 Let's do minimal coverage according to ISTQB standards, like decision table, 2 BVA, negative, positive, etc.
+Use test.describe() with tags. Do not use tags in test() level.
+Check Cross‑Origin Resource Sharing (CORS) headers in the response.
+
 
 Use folder structure:
 
